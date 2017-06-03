@@ -9,4 +9,4 @@ Every repository should be registerd inside a Service Provider. To keep it simpl
 ## Future
 
 I'm considering about creating a package to simplify the use of my way of implementing the repository pattern.
-This package will only contain some abstrac base classes.
+This package will only contain some abstract base classes.
