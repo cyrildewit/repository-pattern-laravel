@@ -10,3 +10,18 @@ Every repository should be registerd inside a Service Provider. To keep it simpl
 
 I'm considering about creating a package to simplify the use of my way of implementing the repository pattern.
 This package will only contain some abstract base classes.
+
+# Using a Repository in your Controllers
+
+```php
+// ...
+class CoursesController extends Model
+{
+    /**
+     * Constructor function of CoursesController
+     *
+     * @return void
+     */
+    public function __construct
+}
+```
