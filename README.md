@@ -14,14 +14,40 @@ This package will only contain some abstract base classes.
 # Using a Repository in your Controllers
 
 ```php
-// ...
-class CoursesController extends Model
+// App/Controllers/CoursesController.php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Repositories\Course\CourseRepositoryInterface;
+
+class CoursesController extends Controller
 {
+    /** @var \App\Repositories\Course\CourseRepositoryInterface */
+    protected $courseRepository;
+
     /**
      * Constructor function of CoursesController
      *
      * @return void
      */
-    public function __construct
+    public function __construct(CourseRepositoryInterface $courseRepository)
+    {
+        $this->courseRepository = $courseRepository;
+    }
+    
+    /**
+     * Returns the courses catalog page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        $courses = $this->coursesRepository->getAll();
+        
+        return view('courses.index', [
+            'courses' => $courses,
+        ]);
+    }
 }
 ```
