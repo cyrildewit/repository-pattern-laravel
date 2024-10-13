@@ -1,3 +1,5 @@
+**Edit:** For everyone who is considering to apply the repository pattern in Laravel. I have stepped away from it, since Eloquent ORM already kind of acts as a repository.
+
 # Repository Pattern in Laravel 5.* example
 
 In this git repository you'll find some code examples of my implementation of the repository pattern in Laravel
